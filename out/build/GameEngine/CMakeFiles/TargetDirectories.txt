@@ -1,0 +1,3 @@
+/media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine/CMakeFiles/MyEngine.dir
+/media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine/CMakeFiles/edit_cache.dir
+/media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine/CMakeFiles/rebuild_cache.dir
