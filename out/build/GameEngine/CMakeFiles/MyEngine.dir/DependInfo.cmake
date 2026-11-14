@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/backends/imgui_impl_glfw.cpp" "CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_glfw.cpp.o" "gcc" "CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_glfw.cpp.o.d"
   "/media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/backends/imgui_impl_opengl3.cpp" "CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_opengl3.cpp.o" "gcc" "CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_opengl3.cpp.o.d"
   "/media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui.cpp" "CMakeFiles/MyEngine.dir/imgui/imgui.cpp.o" "gcc" "CMakeFiles/MyEngine.dir/imgui/imgui.cpp.o.d"
+  "/media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_demo.cpp" "CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.o" "gcc" "CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.o.d"
   "/media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_draw.cpp" "CMakeFiles/MyEngine.dir/imgui/imgui_draw.cpp.o" "gcc" "CMakeFiles/MyEngine.dir/imgui/imgui_draw.cpp.o.d"
   "/media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_tables.cpp" "CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.o" "gcc" "CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.o.d"
   "/media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_widgets.cpp" "CMakeFiles/MyEngine.dir/imgui/imgui_widgets.cpp.o" "gcc" "CMakeFiles/MyEngine.dir/imgui/imgui_widgets.cpp.o.d"

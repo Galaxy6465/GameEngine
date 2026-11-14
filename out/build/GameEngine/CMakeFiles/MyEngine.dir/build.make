@@ -223,10 +223,24 @@ CMakeFiles/MyEngine.dir/imgui/imgui_draw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyEngine.dir/imgui/imgui_draw.cpp.s"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_draw.cpp -o CMakeFiles/MyEngine.dir/imgui/imgui_draw.cpp.s
 
+CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.o: CMakeFiles/MyEngine.dir/flags.make
+CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.o: /media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_demo.cpp
+CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.o: CMakeFiles/MyEngine.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.o -MF CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.o.d -o CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.o -c /media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_demo.cpp
+
+CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.i"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_demo.cpp > CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.i
+
+CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.s"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_demo.cpp -o CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.s
+
 CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.o: CMakeFiles/MyEngine.dir/flags.make
 CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.o: /media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_tables.cpp
 CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.o: CMakeFiles/MyEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.o -MF CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.o.d -o CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.o -c /media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_tables.cpp
 
 CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.i: cmake_force
@@ -240,7 +254,7 @@ CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.s: cmake_force
 CMakeFiles/MyEngine.dir/imgui/imgui_widgets.cpp.o: CMakeFiles/MyEngine.dir/flags.make
 CMakeFiles/MyEngine.dir/imgui/imgui_widgets.cpp.o: /media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_widgets.cpp
 CMakeFiles/MyEngine.dir/imgui/imgui_widgets.cpp.o: CMakeFiles/MyEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/MyEngine.dir/imgui/imgui_widgets.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/MyEngine.dir/imgui/imgui_widgets.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyEngine.dir/imgui/imgui_widgets.cpp.o -MF CMakeFiles/MyEngine.dir/imgui/imgui_widgets.cpp.o.d -o CMakeFiles/MyEngine.dir/imgui/imgui_widgets.cpp.o -c /media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_widgets.cpp
 
 CMakeFiles/MyEngine.dir/imgui/imgui_widgets.cpp.i: cmake_force
@@ -254,7 +268,7 @@ CMakeFiles/MyEngine.dir/imgui/imgui_widgets.cpp.s: cmake_force
 CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/MyEngine.dir/flags.make
 CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_glfw.cpp.o: /media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/backends/imgui_impl_glfw.cpp
 CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/MyEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_glfw.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_glfw.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_glfw.cpp.o -MF CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_glfw.cpp.o.d -o CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_glfw.cpp.o -c /media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/backends/imgui_impl_glfw.cpp
 
 CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_glfw.cpp.i: cmake_force
@@ -268,7 +282,7 @@ CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_glfw.cpp.s: cmake_force
 CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/MyEngine.dir/flags.make
 CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_opengl3.cpp.o: /media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/backends/imgui_impl_opengl3.cpp
 CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/MyEngine.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_opengl3.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_opengl3.cpp.o"
 	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_opengl3.cpp.o -MF CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_opengl3.cpp.o -c /media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/backends/imgui_impl_opengl3.cpp
 
 CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_opengl3.cpp.i: cmake_force
@@ -292,6 +306,7 @@ MyEngine_OBJECTS = \
 "CMakeFiles/MyEngine.dir/glad/src/glad.c.o" \
 "CMakeFiles/MyEngine.dir/imgui/imgui.cpp.o" \
 "CMakeFiles/MyEngine.dir/imgui/imgui_draw.cpp.o" \
+"CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.o" \
 "CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.o" \
 "CMakeFiles/MyEngine.dir/imgui/imgui_widgets.cpp.o" \
 "CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_glfw.cpp.o" \
@@ -311,6 +326,7 @@ MyEngine: CMakeFiles/MyEngine.dir/src/ui/ImGuiLayer.cpp.o
 MyEngine: CMakeFiles/MyEngine.dir/glad/src/glad.c.o
 MyEngine: CMakeFiles/MyEngine.dir/imgui/imgui.cpp.o
 MyEngine: CMakeFiles/MyEngine.dir/imgui/imgui_draw.cpp.o
+MyEngine: CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.o
 MyEngine: CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.o
 MyEngine: CMakeFiles/MyEngine.dir/imgui/imgui_widgets.cpp.o
 MyEngine: CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_glfw.cpp.o
@@ -319,7 +335,7 @@ MyEngine: CMakeFiles/MyEngine.dir/build.make
 MyEngine: /usr/lib/x86_64-linux-gnu/libGLX.so
 MyEngine: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 MyEngine: CMakeFiles/MyEngine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable MyEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable MyEngine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MyEngine.dir/link.txt --verbose=$(VERBOSE)
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold "Copying resources directory to output folder"
 	/usr/bin/cmake -E copy_directory /media/galaxy/SSD/LearnOpenGL/GameEngine/resources /media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine/resources

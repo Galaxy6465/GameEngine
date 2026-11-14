@@ -225,6 +225,30 @@ imgui/imgui.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyEngine.dir/build.make CMakeFiles/MyEngine.dir/imgui/imgui.cpp.s
 .PHONY : imgui/imgui.cpp.s
 
+imgui/imgui_demo.o: imgui/imgui_demo.cpp.o
+.PHONY : imgui/imgui_demo.o
+
+# target to build an object file
+imgui/imgui_demo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyEngine.dir/build.make CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.o
+.PHONY : imgui/imgui_demo.cpp.o
+
+imgui/imgui_demo.i: imgui/imgui_demo.cpp.i
+.PHONY : imgui/imgui_demo.i
+
+# target to preprocess a source file
+imgui/imgui_demo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyEngine.dir/build.make CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.i
+.PHONY : imgui/imgui_demo.cpp.i
+
+imgui/imgui_demo.s: imgui/imgui_demo.cpp.s
+.PHONY : imgui/imgui_demo.s
+
+# target to generate assembly for a file
+imgui/imgui_demo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyEngine.dir/build.make CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.s
+.PHONY : imgui/imgui_demo.cpp.s
+
 imgui/imgui_draw.o: imgui/imgui_draw.cpp.o
 .PHONY : imgui/imgui_draw.o
 
@@ -510,6 +534,9 @@ help:
 	@echo "... imgui/imgui.o"
 	@echo "... imgui/imgui.i"
 	@echo "... imgui/imgui.s"
+	@echo "... imgui/imgui_demo.o"
+	@echo "... imgui/imgui_demo.i"
+	@echo "... imgui/imgui_demo.s"
 	@echo "... imgui/imgui_draw.o"
 	@echo "... imgui/imgui_draw.i"
 	@echo "... imgui/imgui_draw.s"

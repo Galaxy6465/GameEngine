@@ -67,6 +67,12 @@
 },
 {
   "directory": "/media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine",
+  "command": "/usr/bin/g++  -I/media/galaxy/SSD/LearnOpenGL/GameEngine/include -I/media/galaxy/SSD/LearnOpenGL/GameEngine/glad/include -I/media/galaxy/SSD/LearnOpenGL/GameEngine/imgui -I/media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/backends -g -std=gnu++17 -o CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.o -c /media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_demo.cpp",
+  "file": "/media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_demo.cpp",
+  "output": "CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.o"
+},
+{
+  "directory": "/media/galaxy/SSD/LearnOpenGL/GameEngine/out/build/GameEngine",
   "command": "/usr/bin/g++  -I/media/galaxy/SSD/LearnOpenGL/GameEngine/include -I/media/galaxy/SSD/LearnOpenGL/GameEngine/glad/include -I/media/galaxy/SSD/LearnOpenGL/GameEngine/imgui -I/media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/backends -g -std=gnu++17 -o CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.o -c /media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_tables.cpp",
   "file": "/media/galaxy/SSD/LearnOpenGL/GameEngine/imgui/imgui_tables.cpp",
   "output": "CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.o"
