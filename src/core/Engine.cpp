@@ -220,6 +220,7 @@ void Engine::CreateWindow(){
         // bool show_another_window = false;
         ImVec4 clear_color = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
 
+        static bool selection[8] = { false, true, false, false, false, false, false};
     //X ========================================================== \\
 
 
@@ -302,7 +303,19 @@ void Engine::CreateWindow(){
             ImGui::SliderFloat3("Cube Position :", glm::value_ptr(cubeValues.position), 0.0f, 10.0f);
             ImGui::SliderFloat3("Cube Size :", glm::value_ptr(cubeValues.size), 0.0f, 3.0f);
 
-            
+            if (ImGui::TreeNode("ON/OFF Objects"))
+            {
+                ImGui::Selectable("1. Triangle", &selection[0]);
+                ImGui::Selectable("2. Square", &selection[1]);
+                ImGui::Selectable("3. Pyramid", &selection[2]);
+                ImGui::Selectable("4. Light", &selection[3]);
+                ImGui::Selectable("5. Cube", &selection[4]);
+                ImGui::Selectable("6. Sphere", &selection[5]);
+                if (ImGui::Selectable("7. N-Cubes", selection[6], ImGuiSelectableFlags_AllowDoubleClick))
+                    if (ImGui::IsMouseDoubleClicked(0))
+                        selection[6] = !selection[6];
+                ImGui::TreePop();
+            }
 
             ImGui::End();
         }
@@ -320,42 +333,48 @@ void Engine::CreateWindow(){
 
 
         //* ---------- DRAW TRIANGLE -----
-        triangle.texture->Bind(0);
-        triangle.shader->use();
-        triangle.shader->setBool("textures", true);
-        triangle.shader->setInt("ourTexture", 0);
+        if(selection[0]){
+            triangle.texture->Bind(0);
+            triangle.shader->use();
+            triangle.shader->setBool("textures", true);
+            triangle.shader->setInt("ourTexture", 0);
 
-        triangle.shader->setMat4("view", view);
-        triangle.shader->setMat4("projection", projection);
+            triangle.shader->setMat4("view", view);
+            triangle.shader->setMat4("projection", projection);
 
-        glm::mat4 triangleModel = glm::mat4(1.0f);
-        triangle.shader->setMat4("model", triangleModel);
+            glm::mat4 triangleModel = glm::mat4(1.0f);
+            triangle.shader->setMat4("model", triangleModel);
 
-        glBindVertexArray(triangle.VAO);
-        glDrawArrays(GL_TRIANGLES, 0, 3);
-        glBindVertexArray(0);
+            glBindVertexArray(triangle.VAO);
+            glDrawArrays(GL_TRIANGLES, 0, 3);
+            glBindVertexArray(0);
+        }
         //* -------------------------------
 
         //* --- DRAW YOUR SQUARE ---
-        square.texture->Bind(0);
-        square.shader->use();
-        square.shader->setBool("textures", true);
-        square.shader->setInt("ourTexture", 0);
-        
-        square.shader->setMat4("view", view);
-        square.shader->setMat4("projection", projection);
+        if(selection[1]) {
+            square.texture->Bind(0);
+            square.shader->use();
+            square.shader->setBool("textures", true);
+            square.shader->setInt("ourTexture", 0);
+            
+            square.shader->setMat4("view", view);
+            square.shader->setMat4("projection", projection);
 
-        glm::mat4 squareModel = glm::mat4(1.0f);
-        squareModel = glm::rotate(squareModel, glm::radians((float)glfwGetTime() * 20.0f), glm::vec3(1.0f, 1.0f, 0.0f));
-        square.shader->setMat4("model", squareModel);
+            glm::mat4 squareModel = glm::mat4(1.0f);
+            squareModel = glm::rotate(squareModel, glm::radians((float)glfwGetTime() * 20.0f), glm::vec3(1.0f, 1.0f, 0.0f));
+            square.shader->setMat4("model", squareModel);
 
-        glBindVertexArray(square.VAO);
-        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-        glBindVertexArray(0);
+            glBindVertexArray(square.VAO);
+            glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
+            glBindVertexArray(0);
+        }
         //* ------------------------
 
         //* --- DRAW YOUR PYRAMID ---
-        glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+        if(selection[2])
+        {
+            glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         pyramid.shader->use();
         pyramid.shader->setBool("textures", false);
         
@@ -371,10 +390,13 @@ void Engine::CreateWindow(){
         glDrawArrays(GL_TRIANGLES, 0, 18);
         glBindVertexArray(0);
         glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+        }
         //* ------------------------
 
         //* ----------- Draw Light ------------
-        light.shader->use();
+        if(selection[3])
+        {
+            light.shader->use();
         light.shader->setMat4("view", view);
         light.shader->setMat4("projection", projection);
 
@@ -388,10 +410,12 @@ void Engine::CreateWindow(){
         glBindVertexArray(light.VAO);
         glDrawArrays(GL_TRIANGLES, 0, 36);
         glBindVertexArray(0);
+        }
         //* ------------------------------------
 
         //* ----------- DRAW CUBE TO WORK ON LIGHT ----------
-        cube.texture->Bind(0);
+        if(selection[4]){
+            cube.texture->Bind(0);
             cube.shader->use();
             cube.shader->setBool("textures", true);
             cube.shader->setInt("ourTexture", 0);
@@ -411,10 +435,12 @@ void Engine::CreateWindow(){
             glBindVertexArray(cube.VAO);
             glDrawArrays(GL_TRIANGLES, 0, 36);
             glBindVertexArray(0);
+        }
         //* -------------------------------------------------
 
         //* -------------- DRAW SPHERE --------------------
-        sphere.texture->Bind(0);
+        if(selection[5]){
+            sphere.texture->Bind(0);
         sphere.shader->use();
         sphere.shader->setBool("textures", true);
         sphere.shader->setInt("ourTexture", 0);
@@ -432,9 +458,11 @@ void Engine::CreateWindow(){
         // Draw using elements (indices size, unsigned int type, offset pointer)
         glDrawElements(GL_TRIANGLES, static_cast<GLsizei>(sphere.indices.size()), GL_UNSIGNED_INT, 0);
         glBindVertexArray(0);
+        }
         //* ------------------------------------------------
 
         //* ------ DRAW YOUR N-CUBES ------------------
+        if(selection[6]){
         // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         for(int i = 0; i < ObjectsDataBase.cubeList.size(); i++) {
             cube.texture->Bind(0);
@@ -477,6 +505,8 @@ void Engine::CreateWindow(){
                 lastSpawnTime = currentFrame;
             }
         }
+        }
+        
         //* --------------------------------------------------
 
         //X ------------------------------ \\
