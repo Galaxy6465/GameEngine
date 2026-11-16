@@ -115,8 +115,8 @@ int Engine::Init(){
     }
 
     glEnable(GL_DEPTH_TEST);
-    ImGuiLayer::Init(s_window);
-
+    
+    ImGuiLayer::Init(s_window, context);
     OPENGL_INIT();
 
     return 1;
