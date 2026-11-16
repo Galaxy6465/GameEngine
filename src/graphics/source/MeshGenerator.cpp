@@ -1,4 +1,4 @@
-#include "graphics/MeshGenerator.hpp"
+#include "MeshGenerator.h"
 
 
 void GenerateSphereData(ObjectData& sphereData, float radius, unsigned int sectorCount, unsigned int stackCount, bool normals, bool textures) {

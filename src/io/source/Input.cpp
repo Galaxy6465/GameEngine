@@ -1,4 +1,4 @@
-#include "io/Input.hpp"
+#include "Input.h"
 
 static float lastX = 400.0f;
 static float lastY = 400.0f;

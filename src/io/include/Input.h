@@ -1,7 +1,7 @@
 #ifndef INPUT_HPP
 #define INPUT_HPP
 
-#include "graphics/camera.hpp"
+#include "camera.h"
 #include <GLFW/glfw3.h>
 
 class Inputs {

@@ -1,4 +1,4 @@
-#include "ui/ImGuiLayer.hpp"
+#include "ImGuiLayer.h"
 
 void ImGuiLayer::Init(GLFWwindow* window) {
     IMGUI_CHECKVERSION();
@@ -32,3 +32,4 @@ void ImGuiLayer::Shutdown() {
     ImGui_ImplGlfw_Shutdown();
     ImGui::DestroyContext();
 }
+

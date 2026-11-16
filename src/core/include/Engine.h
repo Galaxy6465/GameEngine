@@ -1,20 +1,25 @@
 #ifndef ENGINE_HPP
 #define ENGINE_HPP
 
-// 1. Core and Graphics Dependencies
-#include "core/EngineContext.hpp"
-#include "io/Input.hpp"
-#include "ui/ImGuiLayer.hpp"
-#include "graphics/MeshGenerator.hpp"
+// 1. Core and Graphics Dependencies (Matching modular include paths)
+#include "EngineContext.h"
+#include "Input.h"
+#include "ImGuiLayer.h"
+#include "MeshGenerator.h"
+#include "ObjectDataBase.h"
+#include "ObjectStructure.h"
+#include "ImGUI4Object.h"
+#include "Renderer.h"
 
 // 2. External Libraries & Standard Headers
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <imgui.h>
-#include "graphics/shader_m.h"
-#include "graphics/texture_m.hpp"
+#include "shader_m.h"
+#include "texture_m.h"
 #include <vector>
 #include <iostream>
+#include <glm/gtc/type_ptr.hpp>
 
 class Engine {
 private:
