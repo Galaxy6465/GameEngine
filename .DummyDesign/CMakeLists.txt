@@ -15,4 +15,9 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     source/include
     source/include/Application
     source/include/Pltform
+    ThirdParty
 )
+
+find_package(glfw3 REQUIRED)
+target_link_libraries(GalaxyEngine PRIVATE glfw GL)
+

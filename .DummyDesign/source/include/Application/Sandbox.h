@@ -3,7 +3,7 @@
 class Sandbox : public GalaxyEngine::Application
 {
 private:
-    
+
 public:
     Sandbox();
     ~Sandbox();
