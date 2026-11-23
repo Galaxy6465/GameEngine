@@ -1,0 +1,3 @@
+/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine/CMakeFiles/MyEngine.dir
+/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine/CMakeFiles/edit_cache.dir
+/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine/CMakeFiles/rebuild_cache.dir

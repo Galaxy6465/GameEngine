@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(MyEngine LANGUAGES C CXX)
+project(RayLibEngine LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -11,39 +11,46 @@ option(ENABLE_ASAN "Enable AddressSanitizer for memory debugging" OFF)
 find_package(glfw3 REQUIRED)
 find_package(OpenGL REQUIRED)
 
-# Include directories covering the root include and all modular sub-includes
+# Set path to your local ImGui folder
+set(IMGUI_DIR "${CMAKE_CURRENT_SOURCE_DIR}/imgui")
+
+# Include directories covering source/, glad/, and imgui/
 include_directories(
-    include
-    source/include
-    ThirdParty/glad/include
-    ThirdParty/imgui
-    ThirdParty/imgui/backends
+    source
+    glad/include
+    ${IMGUI_DIR}
+    ${IMGUI_DIR}/backends
 )
 
-# Automatically find all C++ source files recursively under src/
-file(GLOB_RECURSE ENGINE_SOURCES source/*.cpp)
+# Automatically find all C++ source files recursively under source/
+file(GLOB_RECURSE ENGINE_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp")
 
-# Third-party source files with correct ThirdParty/ prefixes
+# Third-party / local library sources from glad/ and imgui/
 set(THIRD_PARTY_SOURCES
-    ThirdParty/glad/src/glad.c
-    ThirdParty/imgui/imgui.cpp
-    ThirdParty/imgui/imgui_draw.cpp
-    ThirdParty/imgui/imgui_demo.cpp
-    ThirdParty/imgui/imgui_tables.cpp
-    ThirdParty/imgui/imgui_widgets.cpp
-    ThirdParty/imgui/backends/imgui_impl_glfw.cpp
-    ThirdParty/imgui/backends/imgui_impl_opengl3.cpp
+    glad/src/glad.c
+    ${IMGUI_DIR}/imgui.cpp
+    ${IMGUI_DIR}/imgui_demo.cpp
+    ${IMGUI_DIR}/imgui_draw.cpp
+    ${IMGUI_DIR}/imgui_tables.cpp
+    ${IMGUI_DIR}/imgui_widgets.cpp
+    ${IMGUI_DIR}/backends/imgui_impl_glfw.cpp
+    ${IMGUI_DIR}/backends/imgui_impl_opengl3.cpp
 )
 
 # Define executable target
 add_executable(MyEngine 
     ${ENGINE_SOURCES} 
     ${THIRD_PARTY_SOURCES}
-    CMakeLists.txt
 )
 
-# Link OpenGL, GLFW, and system libraries
-target_link_libraries(MyEngine PRIVATE OpenGL::GL glfw dl pthread)
+# Link OpenGL, GLFW, and Linux system libraries
+target_link_libraries(MyEngine PRIVATE 
+    OpenGL::GL 
+    glfw 
+    dl 
+    pthread 
+    X11
+)
 
 # Enable AddressSanitizer when requested
 if(ENABLE_ASAN AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
@@ -58,11 +65,23 @@ if(ENABLE_ASAN AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     )
 endif()
 
-# Automatically copy resources directory to the build folder
-add_custom_command(
-    TARGET MyEngine POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-        ${CMAKE_SOURCE_DIR}/resources
-        $<TARGET_FILE_DIR:MyEngine>/resources
-    COMMENT "Copying resources directory to output folder"
-)
+# Automatically copy resources directory to the build folder (when present)
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/resources")
+    add_custom_command(
+        TARGET MyEngine POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+            "${CMAKE_CURRENT_SOURCE_DIR}/resources"
+            "$<TARGET_FILE_DIR:MyEngine>/resources"
+        COMMENT "Copying resources directory to output folder"
+    )
+endif()
+
+if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/res")
+    add_custom_command(
+        TARGET MyEngine POST_BUILD
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
+            "${CMAKE_CURRENT_SOURCE_DIR}/res"
+            "$<TARGET_FILE_DIR:MyEngine>/res"
+        COMMENT "Copying engine shaders and resources"
+    )
+endif()

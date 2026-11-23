@@ -1,0 +1,74 @@
+[
+{
+  "directory": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine",
+  "command": "/usr/bin/g++  -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends -g -std=gnu++17 -o CMakeFiles/MyEngine.dir/source/Application/Application.cpp.o -c /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Application/Application.cpp",
+  "file": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Application/Application.cpp",
+  "output": "CMakeFiles/MyEngine.dir/source/Application/Application.cpp.o"
+},
+{
+  "directory": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine",
+  "command": "/usr/bin/g++  -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends -g -std=gnu++17 -o CMakeFiles/MyEngine.dir/source/Layers/LayerStack.cpp.o -c /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Layers/LayerStack.cpp",
+  "file": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Layers/LayerStack.cpp",
+  "output": "CMakeFiles/MyEngine.dir/source/Layers/LayerStack.cpp.o"
+},
+{
+  "directory": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine",
+  "command": "/usr/bin/g++  -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends -g -std=gnu++17 -o CMakeFiles/MyEngine.dir/source/Window/Window.cpp.o -c /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Window/Window.cpp",
+  "file": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Window/Window.cpp",
+  "output": "CMakeFiles/MyEngine.dir/source/Window/Window.cpp.o"
+},
+{
+  "directory": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine",
+  "command": "/usr/bin/g++  -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends -g -std=gnu++17 -o CMakeFiles/MyEngine.dir/source/main_opengl.cpp.o -c /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/main_opengl.cpp",
+  "file": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/main_opengl.cpp",
+  "output": "CMakeFiles/MyEngine.dir/source/main_opengl.cpp.o"
+},
+{
+  "directory": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine",
+  "command": "/usr/bin/gcc  -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends -g -o CMakeFiles/MyEngine.dir/glad/src/glad.c.o -c /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/src/glad.c",
+  "file": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/src/glad.c",
+  "output": "CMakeFiles/MyEngine.dir/glad/src/glad.c.o"
+},
+{
+  "directory": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine",
+  "command": "/usr/bin/g++  -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends -g -std=gnu++17 -o CMakeFiles/MyEngine.dir/imgui/imgui.cpp.o -c /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/imgui.cpp",
+  "file": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/imgui.cpp",
+  "output": "CMakeFiles/MyEngine.dir/imgui/imgui.cpp.o"
+},
+{
+  "directory": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine",
+  "command": "/usr/bin/g++  -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends -g -std=gnu++17 -o CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.o -c /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/imgui_demo.cpp",
+  "file": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/imgui_demo.cpp",
+  "output": "CMakeFiles/MyEngine.dir/imgui/imgui_demo.cpp.o"
+},
+{
+  "directory": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine",
+  "command": "/usr/bin/g++  -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends -g -std=gnu++17 -o CMakeFiles/MyEngine.dir/imgui/imgui_draw.cpp.o -c /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/imgui_draw.cpp",
+  "file": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/imgui_draw.cpp",
+  "output": "CMakeFiles/MyEngine.dir/imgui/imgui_draw.cpp.o"
+},
+{
+  "directory": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine",
+  "command": "/usr/bin/g++  -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends -g -std=gnu++17 -o CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.o -c /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/imgui_tables.cpp",
+  "file": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/imgui_tables.cpp",
+  "output": "CMakeFiles/MyEngine.dir/imgui/imgui_tables.cpp.o"
+},
+{
+  "directory": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine",
+  "command": "/usr/bin/g++  -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends -g -std=gnu++17 -o CMakeFiles/MyEngine.dir/imgui/imgui_widgets.cpp.o -c /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/imgui_widgets.cpp",
+  "file": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/imgui_widgets.cpp",
+  "output": "CMakeFiles/MyEngine.dir/imgui/imgui_widgets.cpp.o"
+},
+{
+  "directory": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine",
+  "command": "/usr/bin/g++  -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends -g -std=gnu++17 -o CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_glfw.cpp.o -c /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends/imgui_impl_glfw.cpp",
+  "file": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends/imgui_impl_glfw.cpp",
+  "output": "CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_glfw.cpp.o"
+},
+{
+  "directory": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine",
+  "command": "/usr/bin/g++  -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends -g -std=gnu++17 -o CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_opengl3.cpp.o -c /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends/imgui_impl_opengl3.cpp",
+  "file": "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends/imgui_impl_opengl3.cpp",
+  "output": "CMakeFiles/MyEngine.dir/imgui/backends/imgui_impl_opengl3.cpp.o"
+}
+]
