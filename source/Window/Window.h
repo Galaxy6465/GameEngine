@@ -14,7 +14,9 @@ public:
     void Init();
 
     
-    bool ShouldClose() { return !m_win_Running || glfwWindowShouldClose(m_Window); }
+    bool ShouldClose() {
+        return !m_win_Running || glfwWindowShouldClose(m_Window) || (glfwGetKey(m_Window, GLFW_KEY_ESCAPE) == GLFW_PRESS); 
+    }
 
     const char* GetWindowName() { return m_Context.win_Name; }
     

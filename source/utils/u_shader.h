@@ -76,7 +76,6 @@ public:
         glDeleteShader(vertexShader);
         glDeleteShader(fragmentShader);
     }
-
     void Use() const
     {
         EnsureLoaded();

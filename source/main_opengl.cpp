@@ -12,7 +12,6 @@ int main() {
     Specifications::appSpecifiactions.app_Height = 720;
     Specifications::appSpecifiactions.app_VSync = false;
     
-    
     APP_INFO(" INITIALIZING..::", Specifications::appSpecifiactions.app_Name);
     Application app;
     returnCode =  app.Init();
