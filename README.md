@@ -1,4 +1,4 @@
-# RaylibEngine
+# Engine
 
 A small C++17 desktop-engine experiment using GLFW to create a window, OpenGL 3.3
 for rendering, GLAD for OpenGL function loading, and Dear ImGui for an optional
