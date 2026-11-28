@@ -6,10 +6,14 @@
 #include <imgui_impl_glfw.h>
 #include <imgui_impl_opengl3.h>
 
+#include "Core/Settings.h"
+
+#include <httplib.h>
+
 class MainImGuiOverlay : public Layer {
 public:
     MainImGuiOverlay(GLFWwindow* window, float* cubeColor = nullptr)
-        : Layer("MainImGuiOverlay"), m_Window(window), m_CubeColor(cubeColor) {}
+        : Layer("MainImGuiOverlay"), m_Window(window) {}
 
     void OnAttach() override {
         glfwMakeContextCurrent(m_Window);
@@ -59,12 +63,52 @@ public:
             ImGui::GetMainViewport(),
             ImGuiDockNodeFlags_PassthruCentralNode);
 
-        // --- UI Widgets ---
+        //! =======================================|| APP BAR ||=====================================||
+        static bool m_ShowInspector;
+        static bool m_ShowElements;
+        static bool m_ShowDemoWindow;
+
+        if (ImGui::BeginMainMenuBar()) {
+            if (ImGui::BeginMenu("File")) {
+                if (ImGui::MenuItem("New Project", "Ctrl+N")) { /* Action */ }
+                if (ImGui::MenuItem("Open...", "Ctrl+O"))     { /* Action */ }
+                if (ImGui::MenuItem("Save", "Ctrl+S"))        { /* Action */ }
+                ImGui::Separator();
+                if (ImGui::MenuItem("Exit"))                  { /* Close app */ }
+                ImGui::EndMenu();
+            }
+
+            if (ImGui::BeginMenu("View")) {
+                ImGui::MenuItem("Engine Inspector", nullptr, &m_ShowInspector);
+                ImGui::MenuItem("Element Storage", nullptr, &m_ShowElements);
+                ImGui::MenuItem("ImGui Demo Window", nullptr, &m_ShowDemoWindow);
+                ImGui::EndMenu();
+            }
+
+            if(ImGui::BeginMenu("Settings")) {
+                if(ImGui::Checkbox("VSync", &Settings::VSync)) {
+
+                }
+                ImGui::EndMenu();
+            }
+
+            // Optional: Right-aligned action button (e.g., Play / Preview App)
+            float buttonWidth = 70.0f;
+            ImGui::SetCursorPosX(ImGui::GetWindowWidth() - buttonWidth - ImGui::GetStyle().WindowPadding.x);
+            if (ImGui::Button("Preview", ImVec2(buttonWidth, 0))) {
+                // Trigger app preview
+            }
+
+            ImGui::EndMainMenuBar();
+        }
+
+        //! =====================================|| INSPECTOR WINDOW ||=====================================||
+            
+        ImGui::SetNextWindowSize(ImVec2(350, 200), ImGuiCond_FirstUseEver);
+
         ImGui::Begin("Engine Inspector");
         ImGui::Text("FPS: %.1f (%.3f ms)", ImGui::GetIO().Framerate, 1000.0f / ImGui::GetIO().Framerate);
-        if (m_CubeColor) {
-            ImGui::ColorEdit4("Cube Color", m_CubeColor);
-        }
+        ImGui::ColorEdit4("Background Color", Settings::wind_Settings[0].backgroundColor.col);
         ImGui::Checkbox("Show ImGui Demo Window", &m_ShowDemoWindow);
         ImGui::End();
 
@@ -72,18 +116,22 @@ public:
             ImGui::ShowDemoWindow(&m_ShowDemoWindow);
         }
 
-        // Render ImGui draw data on top of OpenGL
         ImGui::Render();
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
         if (ImGui::GetIO().ConfigFlags & ImGuiConfigFlags_ViewportsEnable) {
+            GLFWwindow* backup_current_context = glfwGetCurrentContext(); 
             ImGui::UpdatePlatformWindows();
             ImGui::RenderPlatformWindowsDefault();
+            glfwMakeContextCurrent(backup_current_context);
         }
+
+        //! =====================================|| SIDE BAR ||=====================================||
+    
+        
     }
 
 private:
     GLFWwindow* m_Window = nullptr;
     ImGuiContext* m_Context = nullptr;
-    float* m_CubeColor = nullptr;
-    bool m_ShowDemoWindow = false;
 };

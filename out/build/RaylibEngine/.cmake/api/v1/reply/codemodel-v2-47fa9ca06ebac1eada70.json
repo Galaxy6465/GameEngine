@@ -15,7 +15,8 @@
 					"source" : ".",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -27,10 +28,11 @@
 					[
 						0
 					],
-					"name" : "RayLibEngine",
+					"name" : "MyEngine",
 					"targetIndexes" : 
 					[
-						0
+						0,
+						1
 					]
 				}
 			],
@@ -38,8 +40,15 @@
 			[
 				{
 					"directoryIndex" : 0,
+					"id" : "CopyAssets::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CopyAssets-Debug-23beef4f109e03e4e206.json",
+					"name" : "CopyAssets",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
 					"id" : "MyEngine::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-MyEngine-Debug-30581d41c2d1b54adfd6.json",
+					"jsonFile" : "target-MyEngine-Debug-e29bfa863c2d2a3b6154.json",
 					"name" : "MyEngine",
 					"projectIndex" : 0
 				}

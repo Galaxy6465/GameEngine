@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/g++
 C_DEFINES = 
 
-C_INCLUDES = -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends
+C_INCLUDES = -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source -isystem /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include -isystem /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui -isystem /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends
 
 C_FLAGS = -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends
+CXX_INCLUDES = -I/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source -isystem /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include -isystem /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui -isystem /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/imgui/backends
 
 CXX_FLAGS = -g -std=gnu++17
 

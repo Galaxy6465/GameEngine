@@ -1,23 +1,25 @@
 #pragma once
 
+struct Color {
+    float col[3];
+    float alpha;
+};
+
 namespace Settings {
 
-    struct ViewportSettings {
+    //X App Settings
+    static bool VSync;
+    static Color AppColor;
+    static bool ThemeDark;
 
-    };
 
-    inline static ViewportSettings viewportSettings;
-
-    struct ObjectSettings {
-        float rotation;
-    };
-
-    inline static ObjectSettings objectSettings;
-
+    //X Window Settings
     struct WindowSettigns {
-
+        const char* winName;
+        Color backgroundColor;
     };
-
-    inline static WindowSettigns windowSettings;
+    inline static std::vector<WindowSettigns> wind_Settings = {
+        {.winName = "Main", .backgroundColor = {  {0.15f, 0.15f, 0.18f}, 1.0f}}
+    };
     
 };

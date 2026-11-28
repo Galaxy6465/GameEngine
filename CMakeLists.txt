@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(RayLibEngine LANGUAGES C CXX)
+project(MyEngine LANGUAGES C CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -7,52 +7,59 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 option(ENABLE_ASAN "Enable AddressSanitizer for memory debugging" OFF)
 
-# Find required external packages
+find_package(Threads REQUIRED)
 find_package(glfw3 REQUIRED)
 find_package(OpenGL REQUIRED)
 
-# Set path to your local ImGui folder
+# Ensure cpp-httplib is available before linking:
+# find_package(httplib CONFIG QUIET) # or FetchContent if vendored/fetched
+
 set(IMGUI_DIR "${CMAKE_CURRENT_SOURCE_DIR}/imgui")
 
-# Include directories covering source/, glad/, and imgui/
-include_directories(
-    source
-    glad/include
-    ${IMGUI_DIR}
-    ${IMGUI_DIR}/backends
+file(GLOB_RECURSE ENGINE_SOURCES CONFIGURE_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp"
 )
 
-# Automatically find all C++ source files recursively under source/
-file(GLOB_RECURSE ENGINE_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/source/*.cpp")
-
-# Third-party / local library sources from glad/ and imgui/
 set(THIRD_PARTY_SOURCES
-    glad/src/glad.c
-    ${IMGUI_DIR}/imgui.cpp
-    ${IMGUI_DIR}/imgui_demo.cpp
-    ${IMGUI_DIR}/imgui_draw.cpp
-    ${IMGUI_DIR}/imgui_tables.cpp
-    ${IMGUI_DIR}/imgui_widgets.cpp
-    ${IMGUI_DIR}/backends/imgui_impl_glfw.cpp
-    ${IMGUI_DIR}/backends/imgui_impl_opengl3.cpp
+    "${CMAKE_CURRENT_SOURCE_DIR}/glad/src/glad.c"
+    "${IMGUI_DIR}/imgui.cpp"
+    "${IMGUI_DIR}/imgui_demo.cpp"
+    "${IMGUI_DIR}/imgui_draw.cpp"
+    "${IMGUI_DIR}/imgui_tables.cpp"
+    "${IMGUI_DIR}/imgui_widgets.cpp"
+    "${IMGUI_DIR}/backends/imgui_impl_glfw.cpp"
+    "${IMGUI_DIR}/backends/imgui_impl_opengl3.cpp"
 )
 
-# Define executable target
-add_executable(MyEngine 
-    ${ENGINE_SOURCES} 
+add_executable(MyEngine
+    ${ENGINE_SOURCES}
     ${THIRD_PARTY_SOURCES}
 )
 
-# Link OpenGL, GLFW, and Linux system libraries
-target_link_libraries(MyEngine PRIVATE 
-    OpenGL::GL 
-    glfw 
-    dl 
-    pthread 
-    X11
+target_include_directories(MyEngine PRIVATE
+    "${CMAKE_CURRENT_SOURCE_DIR}/source"
 )
 
-# Enable AddressSanitizer when requested
+target_include_directories(MyEngine SYSTEM PRIVATE
+    "${CMAKE_CURRENT_SOURCE_DIR}/glad/include"
+    "${IMGUI_DIR}"
+    "${IMGUI_DIR}/backends"
+)
+
+target_link_libraries(MyEngine PRIVATE
+    OpenGL::GL
+    glfw
+    Threads::Threads
+)
+
+if(TARGET cpp-httplib)
+    target_link_libraries(MyEngine PRIVATE cpp-httplib)
+endif()
+
+if(UNIX AND NOT APPLE)
+    target_link_libraries(MyEngine PRIVATE dl X11)
+endif()
+
 if(ENABLE_ASAN AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     target_compile_options(MyEngine PRIVATE
         -g
@@ -65,23 +72,41 @@ if(ENABLE_ASAN AND CMAKE_CXX_COMPILER_ID MATCHES "GNU|Clang")
     )
 endif()
 
-# Automatically copy resources directory to the build folder (when present)
-if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/resources")
-    add_custom_command(
-        TARGET MyEngine POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_directory
-            "${CMAKE_CURRENT_SOURCE_DIR}/resources"
-            "$<TARGET_FILE_DIR:MyEngine>/resources"
-        COMMENT "Copying resources directory to output folder"
-    )
-endif()
 
-if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/res")
-    add_custom_command(
-        TARGET MyEngine POST_BUILD
-        COMMAND ${CMAKE_COMMAND} -E copy_directory
-            "${CMAKE_CURRENT_SOURCE_DIR}/res"
-            "$<TARGET_FILE_DIR:MyEngine>/res"
-        COMMENT "Copying engine shaders and resources"
-    )
-endif()
+# foreach(asset_dir IN ITEMS resources res)
+#     if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${asset_dir}")
+#         add_custom_command(
+#             TARGET MyEngine POST_BUILD
+#             COMMAND ${CMAKE_COMMAND} -E copy_directory
+#                 "${CMAKE_CURRENT_SOURCE_DIR}/${asset_dir}"
+#                 "$<TARGET_FILE_DIR:MyEngine>/${asset_dir}"
+#             COMMENT "Copying ${asset_dir} directory to output folder"
+#         )
+#     endif()
+# endforeach()
+
+# Track all files inside resources and res
+file(GLOB_RECURSE ASSET_FILES CONFIGURE_DEPENDS
+    "${CMAKE_CURRENT_SOURCE_DIR}/resources/*"
+    "${CMAKE_CURRENT_SOURCE_DIR}/res/*"
+)
+
+# Runs EVERY time you build, even if no .cpp files changed
+add_custom_target(CopyAssets ALL
+    DEPENDS ${ASSET_FILES}
+    COMMENT "Syncing shader and asset directories to output folder"
+)
+
+foreach(asset_dir IN ITEMS resources res)
+    if(EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/${asset_dir}")
+        add_custom_command(
+            TARGET CopyAssets POST_BUILD
+            COMMAND ${CMAKE_COMMAND} -E copy_directory
+                "${CMAKE_CURRENT_SOURCE_DIR}/${asset_dir}"
+                "${CMAKE_BINARY_DIR}/${asset_dir}"
+        )
+    endif()
+endforeach()
+
+# Now there is no cycle!
+add_dependencies(MyEngine CopyAssets)

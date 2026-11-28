@@ -10,12 +10,18 @@ public:
     ~Application() = default;
 
     int Init();
-
     void Run();
-
     void Clean();
+
+    bool CloseApp() { return glfwWindowShouldClose(appWindow->GetNativeWindow()); }
+
 private:
-    bool m_app_isRunning = false;
-    std::unique_ptr<Window> m_app_Windows;
-    std::unique_ptr<Window> m_app_Windows2;
+    int InitWindow();
+    int InitAPI();
+    void InitCallbacks();
+
+    void Update();
+
+private:
+    std::unique_ptr<Window> appWindow;
 };

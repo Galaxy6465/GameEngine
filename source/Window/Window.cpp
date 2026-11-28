@@ -1,18 +1,19 @@
 #include "Window/Window.h"
 #include "Core/Log.h"
-#include "Application/ApplicationContext.h"
 
-Window::Window(const Specifications::WindowContext& winContext, GLFWwindow* sharedWindow)
+#include "Core/Settings.h"
+
+Window::Window(const WindowContext& ctx, GLFWwindow* sharedWindow)
 {
-    m_Context.win_Name = winContext.win_Name;
-    m_Context.win_Width = winContext.win_Width;
-    m_Context.win_Height = winContext.win_Height;
+    winCtx.name = ctx.name;
+    winCtx.width = ctx.width;
+    winCtx.height = ctx.height;
 
     m_sharedWindow = sharedWindow;
 
-    m_Window = glfwCreateWindow(m_Context.win_Width, m_Context.win_Height, m_Context.win_Name, nullptr, m_sharedWindow);
+    m_Window = glfwCreateWindow(ctx.width, ctx.height, ctx.name, nullptr, m_sharedWindow);
     if(!m_Window){
-        WIN_ERROR("INITIALIZE::FAILED::", m_Context.win_Name);
+        WIN_ERROR("INITIALIZE::FAILED::", ctx.name);
     }
 
     // Bind THIS specific Window instance to its GLFWwindow* handle
@@ -21,8 +22,8 @@ Window::Window(const Specifications::WindowContext& winContext, GLFWwindow* shar
     // Per-window resize callback
     glfwSetWindowSizeCallback(m_Window, [](GLFWwindow* win, int w, int h) {
         auto* self = static_cast<Window*>(glfwGetWindowUserPointer(win));
-        self->m_Context.win_Width = w;
-        self->m_Context.win_Height = h;
+        self->winCtx.width = w;
+        self->winCtx.height = h;
     });
 
     glfwSetScrollCallback(m_Window, [](GLFWwindow* win, double xOffset, double yOffset) {
@@ -32,7 +33,8 @@ Window::Window(const Specifications::WindowContext& winContext, GLFWwindow* shar
 
     // Per-window VSync requires making THIS window's context current first
     glfwMakeContextCurrent(m_Window);
-    glfwSwapInterval(Specifications::appSpecifiactions.app_VSync ? 1 : 0);
+    bool VSync = true;
+    glfwSwapInterval(VSync ? 1 : 0);
 }
 
 Window::~Window()
@@ -80,8 +82,6 @@ void Window::OnRender()
     glfwGetFramebufferSize(m_Window, &width, &height);
     glViewport(0, 0, width, height);
 
-    // 3. Clear the screen with a solid color (e.g., dark gray/blue)
-    glClearColor(0.15f, 0.15f, 0.18f, 1.0f);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // --- Your OpenGL draw calls go here ---

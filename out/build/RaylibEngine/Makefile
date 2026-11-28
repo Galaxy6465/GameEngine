@@ -130,6 +130,19 @@ MyEngine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyEngine.dir/build.make CMakeFiles/MyEngine.dir/build
 .PHONY : MyEngine/fast
 
+#=============================================================================
+# Target rules for targets named CopyAssets
+
+# Build rule for target.
+CopyAssets: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CopyAssets
+.PHONY : CopyAssets
+
+# fast build rule for target.
+CopyAssets/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CopyAssets.dir/build.make CMakeFiles/CopyAssets.dir/build
+.PHONY : CopyAssets/fast
+
 glad/src/glad.o: glad/src/glad.c.o
 .PHONY : glad/src/glad.o
 
@@ -418,6 +431,30 @@ source/main_opengl.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyEngine.dir/build.make CMakeFiles/MyEngine.dir/source/main_opengl.cpp.s
 .PHONY : source/main_opengl.cpp.s
 
+source/utils/stb_image.o: source/utils/stb_image.cpp.o
+.PHONY : source/utils/stb_image.o
+
+# target to build an object file
+source/utils/stb_image.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyEngine.dir/build.make CMakeFiles/MyEngine.dir/source/utils/stb_image.cpp.o
+.PHONY : source/utils/stb_image.cpp.o
+
+source/utils/stb_image.i: source/utils/stb_image.cpp.i
+.PHONY : source/utils/stb_image.i
+
+# target to preprocess a source file
+source/utils/stb_image.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyEngine.dir/build.make CMakeFiles/MyEngine.dir/source/utils/stb_image.cpp.i
+.PHONY : source/utils/stb_image.cpp.i
+
+source/utils/stb_image.s: source/utils/stb_image.cpp.s
+.PHONY : source/utils/stb_image.s
+
+# target to generate assembly for a file
+source/utils/stb_image.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyEngine.dir/build.make CMakeFiles/MyEngine.dir/source/utils/stb_image.cpp.s
+.PHONY : source/utils/stb_image.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -426,6 +463,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... CopyAssets"
 	@echo "... MyEngine"
 	@echo "... glad/src/glad.o"
 	@echo "... glad/src/glad.i"
@@ -463,6 +501,9 @@ help:
 	@echo "... source/main_opengl.o"
 	@echo "... source/main_opengl.i"
 	@echo "... source/main_opengl.s"
+	@echo "... source/utils/stb_image.o"
+	@echo "... source/utils/stb_image.i"
+	@echo "... source/utils/stb_image.s"
 .PHONY : help
 
 

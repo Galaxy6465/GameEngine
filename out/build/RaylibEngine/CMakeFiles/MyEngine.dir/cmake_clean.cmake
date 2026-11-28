@@ -23,6 +23,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/MyEngine.dir/source/Window/Window.cpp.o.d"
   "CMakeFiles/MyEngine.dir/source/main_opengl.cpp.o"
   "CMakeFiles/MyEngine.dir/source/main_opengl.cpp.o.d"
+  "CMakeFiles/MyEngine.dir/source/utils/stb_image.cpp.o"
+  "CMakeFiles/MyEngine.dir/source/utils/stb_image.cpp.o.d"
   "MyEngine"
   "MyEngine.pdb"
 )

@@ -1,24 +1,29 @@
 #pragma once
 
-#include "Application/ApplicationContext.h"
+#include "windowContext.h"
 #include "Layers/LayerStack.h"
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include <iostream>
+
 class Window {
 public:
-    Window(const Specifications::WindowContext& winContext, GLFWwindow* sharedWindow);
+    Window(const WindowContext& ctx, GLFWwindow* sharedWindow);
     virtual ~Window();
 
     void Init();
 
     
-    bool ShouldClose() {
-        return !m_win_Running || glfwWindowShouldClose(m_Window) || (glfwGetKey(m_Window, GLFW_KEY_ESCAPE) == GLFW_PRESS); 
+    void ShouldClose() {
+        if(glfwGetKey(m_Window, GLFW_KEY_ESCAPE) == GLFW_PRESS){
+            glfwSetWindowShouldClose(m_Window, true);
+        }
+        glfwWindowShouldClose(m_Window);
     }
 
-    const char* GetWindowName() { return m_Context.win_Name; }
+    const char* GetWindowName() { return winCtx.name; }
     
 
     GLFWwindow* GetNativeWindow() const { return m_Window; }
@@ -30,13 +35,12 @@ public:
     virtual void OnRender();
     virtual void Clean();
 
-private:
-    bool m_win_Running = true;
 protected:
     virtual void OnScroll(double xOffset, double yOffset);
 
-    Specifications::WindowContext m_Context;
     GLFWwindow* m_Window = nullptr;
     GLFWwindow* m_sharedWindow = nullptr;
     LayerStack m_LayerStack;
+
+    WindowContext winCtx;
 };

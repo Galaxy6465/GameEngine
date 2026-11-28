@@ -155,7 +155,7 @@ CMakeFiles/MyEngine.dir/source/main_opengl.cpp.o: \
  /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Core/Log.h \
  /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Application/Application.h \
  /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Window/Window.h \
- /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Application/ApplicationContext.h \
+ /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Window/windowContext.h \
  /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Layers/LayerStack.h \
  /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Layers/Layer.h \
  /usr/include/c++/14/vector /usr/include/c++/14/bits/stl_uninitialized.h \

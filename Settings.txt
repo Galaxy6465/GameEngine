@@ -1,0 +1,12 @@
+Application Settings {
+    - VSync -> bool ( swap intervals )
+    - App Main Color -> Color
+    - Theme -> bool (Dark, Light)
+    - 
+}
+
+Window Settings {
+    - Size -> Vec2
+    - Clear Color -> Color
+
+}

@@ -64,6 +64,7 @@ CMAKE_BINARY_DIR = /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPl
 
 # The main recursive "all" target.
 all: CMakeFiles/MyEngine.dir/all
+all: CMakeFiles/CopyAssets.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -72,21 +73,22 @@ preinstall:
 
 # The main recursive "clean" target.
 clean: CMakeFiles/MyEngine.dir/clean
+clean: CMakeFiles/CopyAssets.dir/clean
 .PHONY : clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/MyEngine.dir
 
 # All Build rule for target.
-CMakeFiles/MyEngine.dir/all:
+CMakeFiles/MyEngine.dir/all: CMakeFiles/CopyAssets.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyEngine.dir/build.make CMakeFiles/MyEngine.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyEngine.dir/build.make CMakeFiles/MyEngine.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13 "Built target MyEngine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine/CMakeFiles --progress-num=2,3,4,5,6,7,8,9,10,11,12,13,14,15 "Built target MyEngine"
 .PHONY : CMakeFiles/MyEngine.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MyEngine.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine/CMakeFiles 15
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MyEngine.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine/CMakeFiles 0
 .PHONY : CMakeFiles/MyEngine.dir/rule
@@ -99,6 +101,32 @@ MyEngine: CMakeFiles/MyEngine.dir/rule
 CMakeFiles/MyEngine.dir/clean:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MyEngine.dir/build.make CMakeFiles/MyEngine.dir/clean
 .PHONY : CMakeFiles/MyEngine.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/CopyAssets.dir
+
+# All Build rule for target.
+CMakeFiles/CopyAssets.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CopyAssets.dir/build.make CMakeFiles/CopyAssets.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CopyAssets.dir/build.make CMakeFiles/CopyAssets.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine/CMakeFiles --progress-num=1 "Built target CopyAssets"
+.PHONY : CMakeFiles/CopyAssets.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/CopyAssets.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/CopyAssets.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/out/build/RaylibEngine/CMakeFiles 0
+.PHONY : CMakeFiles/CopyAssets.dir/rule
+
+# Convenience name for target.
+CopyAssets: CMakeFiles/CopyAssets.dir/rule
+.PHONY : CopyAssets
+
+# clean rule for target.
+CMakeFiles/CopyAssets.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/CopyAssets.dir/build.make CMakeFiles/CopyAssets.dir/clean
+.PHONY : CMakeFiles/CopyAssets.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

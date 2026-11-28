@@ -2,7 +2,7 @@ CMakeFiles/MyEngine.dir/source/Window/Window.cpp.o: \
  /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Window/Window.cpp \
  /usr/include/stdc-predef.h \
  /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Window/Window.h \
- /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Application/ApplicationContext.h \
+ /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Window/windowContext.h \
  /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Layers/LayerStack.h \
  /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Layers/Layer.h \
  /usr/include/c++/14/vector /usr/include/c++/14/bits/requires_hosted.h \
@@ -128,10 +128,9 @@ CMakeFiles/MyEngine.dir/source/Window/Window.cpp.o: \
  /usr/include/c++/14/pstl/execution_defs.h \
  /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include/glad/glad.h \
  /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/glad/include/KHR/khrplatform.h \
- /usr/include/GLFW/glfw3.h \
- /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Core/Log.h \
- /usr/include/c++/14/iostream /usr/include/c++/14/ostream \
- /usr/include/c++/14/ios /usr/include/c++/14/bits/char_traits.h \
+ /usr/include/GLFW/glfw3.h /usr/include/c++/14/iostream \
+ /usr/include/c++/14/ostream /usr/include/c++/14/ios \
+ /usr/include/c++/14/bits/char_traits.h \
  /usr/include/c++/14/bits/localefwd.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h \
  /usr/include/c++/14/clocale /usr/include/locale.h \
@@ -179,4 +178,6 @@ CMakeFiles/MyEngine.dir/source/Window/Window.cpp.o: \
  /usr/include/c++/14/bits/locale_facets.tcc \
  /usr/include/c++/14/bits/basic_ios.tcc \
  /usr/include/c++/14/bits/ostream.tcc /usr/include/c++/14/istream \
- /usr/include/c++/14/bits/istream.tcc
+ /usr/include/c++/14/bits/istream.tcc \
+ /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Core/Log.h \
+ /media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Core/Settings.h

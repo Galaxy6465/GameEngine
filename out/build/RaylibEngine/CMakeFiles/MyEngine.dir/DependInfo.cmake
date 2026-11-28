@@ -20,6 +20,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Layers/LayerStack.cpp" "CMakeFiles/MyEngine.dir/source/Layers/LayerStack.cpp.o" "gcc" "CMakeFiles/MyEngine.dir/source/Layers/LayerStack.cpp.o.d"
   "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/Window/Window.cpp" "CMakeFiles/MyEngine.dir/source/Window/Window.cpp.o" "gcc" "CMakeFiles/MyEngine.dir/source/Window/Window.cpp.o.d"
   "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/main_opengl.cpp" "CMakeFiles/MyEngine.dir/source/main_opengl.cpp.o" "gcc" "CMakeFiles/MyEngine.dir/source/main_opengl.cpp.o.d"
+  "/media/galaxy/SSD/GameEngine/Cpp_Architecture/OpenGL_BoilerPlate_Architecture/source/utils/stb_image.cpp" "CMakeFiles/MyEngine.dir/source/utils/stb_image.cpp.o" "gcc" "CMakeFiles/MyEngine.dir/source/utils/stb_image.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
